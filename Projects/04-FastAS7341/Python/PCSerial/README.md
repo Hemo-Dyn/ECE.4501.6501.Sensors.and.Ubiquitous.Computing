@@ -1,0 +1,1 @@
+This is a python serial app allows you to connect with arduino device using serial port, and save the string received into a txt

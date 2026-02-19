@@ -1,0 +1,1 @@
+This python app works similar as the PCSerial but it accepts very fast data read which is important for storage project
