@@ -153,6 +153,7 @@ void loop() {
         readings[9]  = (int)as7341.getChannel(AS7341_CHANNEL_CLEAR);
 
         String pdData = combineData(readings, led, ledBrightness[led]);
+        DBG_PRINTLN(pdData);
 
         // Turn LED off after logging.
         tlc.setPWM(led, 0);
