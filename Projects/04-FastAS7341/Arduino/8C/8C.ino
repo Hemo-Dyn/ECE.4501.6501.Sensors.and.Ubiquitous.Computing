@@ -14,6 +14,15 @@
 #define DATA_PIN  10
 #define CLOCK_PIN 8
 
+bool serialDebug = false;  // device will serial output all the data
+
+// ---- Serial debug helpers ----
+#define DBG_BEGIN(baud) do { if (serialDebug) Serial.begin(baud); } while (0)
+#define DBG_PRINT(x)    do { if (serialDebug) Serial.print(x); } while (0)
+#define DBG_PRINTLN(x)  do { if (serialDebug) Serial.println(x); } while (0)
+#define DBG_WRITE(x)    do { if (serialDebug) Serial.write(x); } while (0)
+
+
 // Create TLC5947 instance. Constructor order is (numBoards, clk, data, latch).
 Adafruit_TLC59711 tlc = Adafruit_TLC59711(NUM_TLC59711, CLOCK_PIN, DATA_PIN);
 
