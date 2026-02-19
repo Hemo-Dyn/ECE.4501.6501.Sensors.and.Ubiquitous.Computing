@@ -1,1 +1,7 @@
 Many embedded and wearable sensing systems require reliable, long-term, non-volatile data storage to support continuous data collection, offline analysis, and recovery from failures. This project focuses on designing a robust storage and logging system for embedded devices using external flash memory. The goal is to develop a storage abstraction that supports structured, sequential data logging with strong data integrity guarantees, resilience to power loss, and awareness of hardware constraints such as erase-before-write behavior and defective memory regions. The system should enable efficient appending of sensor data records, support reliable retrieval and iteration over stored records, and prevent unintentional data loss or corruption. Students will study the characteristics of flash-based storage technologies and design a software interface that allows sensing applications to persist data safely and predictably during long-term deployments. You will be provided with an embedded platform, a flash memory device, and reference documentation. This project aims to deliver functionality comparable to a well-designed, production-quality storage and logging library used in embedded research systems.
+
+LED Index and Wavelength Mapping is:
+```python
+    "LEDIndexLightOrder":       [    0,    1,    2,    3,    4,    5,    7,    8,    9,   10,   13,   14,   15,   18,   19,   22,   23],
+    "LEDIndexToWavelength":     [ 1650, 1550, 1450, 1300, 1250, 1050,  940,  850,  660,  633,  599,  567,  530,  500,  470,  450,  415],
+```

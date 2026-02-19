@@ -80,6 +80,12 @@ const int ledOrder[numGroups] = {
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
 };
 
+int ledBrightness[ledNum] = {
+  4095, 4095, 4095, 4095, 4095, 4095,
+  1000, 1500, 1500, 1500, 1500, 1500,
+  1500, 1500, 1500, 1500, 1500
+};
+
 /* ###################     3. VISIBLE PD INITIALIZATION & READINGS PLACEHOLDER      ################### */
 
 // AS7341 spectral sensor object and settings.
