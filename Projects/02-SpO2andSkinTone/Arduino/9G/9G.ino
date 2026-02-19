@@ -13,7 +13,7 @@
 // TLC5947 wiring pins (board-specific naming; these must match your MCU pin map).
 #define DATA_PIN  10
 #define CLOCK_PIN 8
-bool serialDebug = false;  // device will serial output all the data
+bool serialDebug = true;  // device will serial output all the data
 
 // ---- Serial debug helpers ----
 #define DBG_BEGIN(baud) do { if (serialDebug) Serial.begin(baud); } while (0)
