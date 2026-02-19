@@ -65,6 +65,10 @@ const int ledOrder[numGroups] = {
     8, 0, 1, 2, 3, 4, 5, 6, 7
 };
 
+int ledBrightness[ledNum] = {
+    3000, 5000, 8000, 8000, 8000, 8000, 8000, 8000, 1200
+};
+
 // Index and LED wavelength map:
 
 // "LEDIndexLightOrder":       [    0,    1,    2,    3,    4,    5,    6,    7,    8],

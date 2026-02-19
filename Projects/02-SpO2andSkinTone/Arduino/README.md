@@ -4,3 +4,5 @@ Please use the correct Arduino code corresponding to the sticker ID to upload on
 
 // "LEDIndexLightOrder":       [    0,    1,    2,    3,    4,    5,    6,    7,    8],
 // "LEDIndexToWavelength":     [  660,  633,  599,  567,  530,  470,  450,  415,  850],
+ 
+or 940 if the board starts with 9 number
