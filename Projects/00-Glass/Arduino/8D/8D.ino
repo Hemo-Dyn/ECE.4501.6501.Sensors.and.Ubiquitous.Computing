@@ -170,6 +170,20 @@ void loop() {
 String combineData(uint16_t readings[], int led, int pwm) {
     String pdData = "";
 
+    // Time since boot (HH-MM-SS.mmm)
+    unsigned long ms = millis();
+    unsigned long totalSeconds = ms / 1000UL;
+
+    unsigned int hours   = totalSeconds / 3600UL;
+    unsigned int minutes = (totalSeconds % 3600UL) / 60UL;
+    unsigned int seconds = totalSeconds % 60UL;
+    unsigned int msec    = ms % 1000UL;
+
+    char timeBuf[16];
+    snprintf(timeBuf, sizeof(timeBuf), "%02u-%02u-%02u.%03u",
+            hours, minutes, seconds, msec);
+
+    // Prefix timestamp
     pdData += String(timeBuf) + ",";
 
     // Append all PD channels
@@ -184,6 +198,8 @@ String combineData(uint16_t readings[], int led, int pwm) {
 
     // Append PWM
     pdData += String(pwm);
+
+    // Record terminator (used by readback() to print one record per line)
     pdData += ";";
 
     return pdData;
