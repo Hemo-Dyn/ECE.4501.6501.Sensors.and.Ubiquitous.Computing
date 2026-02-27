@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Irrelevent outside of Fast-PD project
+./Projects/01*
+
 # Distribution / packaging
 .Python
 build/
