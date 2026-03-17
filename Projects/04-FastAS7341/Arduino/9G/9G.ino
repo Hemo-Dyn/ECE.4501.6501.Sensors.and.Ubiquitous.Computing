@@ -3,6 +3,7 @@
 #include <Wire.h>
 #include <Adafruit_AS7341.h>
 #include "Adafruit_TLC59711.h"
+#include "Adafruit_TinyUSB.h"
 
 /* ###################     1. LED DRIVER SETUP INITIALIZATION     ################### */
 
@@ -108,6 +109,7 @@ void allLedsOff() {
 }
 
 void setup() {
+  Wire.begin();
     allLedsOff();
     if (!as7341.begin()) {
         DBG_PRINTLN("Could not find AS7341");
