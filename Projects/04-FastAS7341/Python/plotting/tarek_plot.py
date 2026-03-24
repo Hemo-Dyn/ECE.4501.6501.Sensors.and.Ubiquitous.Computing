@@ -58,6 +58,8 @@ def generate_ppg_report(file_path, target_channel_index=0):
     ax1.annotate(f"Samples: {num_red_samples}", xy=(0.02, 0.90), xycoords='axes fraction', 
                  bbox=dict(boxstyle="round", fc="white", ec="red", alpha=0.8))
     ax1.legend(loc='upper right')
+    ax1.set_xlabel('Time (seconds since start)')
+    ax1.tick_params(labelbottom=True)
     ax1.grid(True, alpha=0.3)
     
     # IR Plot
