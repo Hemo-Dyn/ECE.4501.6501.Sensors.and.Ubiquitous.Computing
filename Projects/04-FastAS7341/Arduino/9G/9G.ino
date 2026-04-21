@@ -109,7 +109,7 @@ void allLedsOff() {
 }
 
 void setup() {
-  Wire.begin();
+    Wire.begin();
     allLedsOff();
     if (!as7341.begin()) {
         DBG_PRINTLN("Could not find AS7341");
